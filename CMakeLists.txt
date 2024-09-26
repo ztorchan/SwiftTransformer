@@ -128,8 +128,7 @@ endif()
 include(FetchContent)
 FetchContent_Declare(
   googletest
-  GIT_REPOSITORY https://github.com/google/googletest.git
-  GIT_TAG release-1.12.1
+  SOURCE_DIR ${CMAKE_SOURCE_DIR}/third-party/googletest
 )
 FetchContent_MakeAvailable(googletest)
 
@@ -138,7 +137,7 @@ FetchContent_MakeAvailable(googletest)
 #   https://github.com/nlohmann/json#cmake
 FetchContent_Declare(
   json
-  URL https://github.com/nlohmann/json/releases/download/v3.11.2/json.tar.xz
+  SOURCE_DIR ${CMAKE_SOURCE_DIR}/third-party/json
 )
 FetchContent_MakeAvailable(json)
 
@@ -146,7 +145,7 @@ FetchContent_MakeAvailable(json)
 # fetch latest argparse
 FetchContent_Declare(
     argparse
-    GIT_REPOSITORY https://github.com/p-ranav/argparse.git
+    SOURCE_DIR ${CMAKE_SOURCE_DIR}/third-party/argparse
 )
 FetchContent_MakeAvailable(argparse)
 
